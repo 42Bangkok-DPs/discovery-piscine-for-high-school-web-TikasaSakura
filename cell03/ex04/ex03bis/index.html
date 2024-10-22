@@ -30,10 +30,8 @@
             const $todoList = $('#ft_list');
             const $newTodoBtn = $('#newTodoBtn');
 
-            // Load existing todos from cookies
             loadTodos();
 
-            // Event listener for creating new todo
             $newTodoBtn.click(function() {
                 const todoText = prompt("Enter a new TO DO:");
                 if (todoText && todoText.trim()) {
@@ -42,11 +40,9 @@
                 }
             });
 
-            // Function to add a new todo
             function addTodo(text) {
                 const $todoItem = $('<div class="todo-item"></div>').text(text);
 
-                // Add event listener to remove todo
                 $todoItem.click(function() {
                     if (confirm("Do you really want to remove this TO DO?")) {
                         $todoItem.remove();
@@ -54,11 +50,10 @@
                     }
                 });
 
-                // Insert the new todo at the top
                 $todoList.prepend($todoItem);
             }
 
-            // Function to save todos in cookies
+  
             function saveTodos() {
                 const todos = $todoList.children().map(function() {
                     return $(this).text();
@@ -66,7 +61,6 @@
                 document.cookie = `todos=${JSON.stringify(todos)}; path=/;`;
             }
 
-            // Function to load todos from cookies
             function loadTodos() {
                 const cookies = document.cookie.split('; ').find(row => row.startsWith('todos='));
                 if (cookies) {
