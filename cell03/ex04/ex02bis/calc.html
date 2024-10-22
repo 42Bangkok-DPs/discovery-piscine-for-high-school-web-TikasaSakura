@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <script>
+        function calculate() {
+            const leftInput = document.getElementById('leftOperand').value;
+            const operator = document.getElementById('operator').value;
+            const rightInput = document.getElementById('rightOperand').value;
+
+            const left = parseInt(leftInput);
+            const right = parseInt(rightInput);
+
+            if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+                alert('Error :(');
+                return;
+            }
+
+            let result;
+
+            switch (operator) {
+                case '+':
+                    result = left + right;
+                    break;
+                case '-':
+                    result = left - right;
+                    break;
+                case '*':
+                    result = left * right;
+                    break;
+                case '/':
+                    if (right === 0) {
+                        alert("It’s over 9000!");
+                        console.log("It’s over 9000!");
+                        return;
+                    }
+                    result = left / right;
+                    break;
+                case '%':
+                    if (right === 0) {
+                        alert("It’s over 9000!");
+                        console.log("It’s over 9000!");
+                        return;
+                    }
+                    result = left % right;
+                    break;
+                default:
+                    alert('Error :(');
+                    return;
+            }
+
+            alert(`Result: ${result}`);
+            console.log(`Result: ${result}`);
+        }
+
+        // Alert every 30 seconds
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+</head>
+<body>
+    <h1>Basic Calculator</h1>
+    <input type="text" id="leftOperand" placeholder="Left Operand" />
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="rightOperand" placeholder="Right Operand" />
+    <input type="button" value="Try me!" onclick="calculate()" />
+</body>
+</html>
