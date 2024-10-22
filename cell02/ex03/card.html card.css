@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-height, initial-scale=.5">
+<style>
+.card {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+</head>
+<body>
+ <div class="card">
+  <table cellpadding="0" cellspacing="0" border="0">
+</table>
+
+  <h1>It's Me</h1>
+  <h1>Me</h1>
+  <img src="danton_phanton_-_1836112165645754635.gif" alt="Avatar" style="width:30%">
+  <div class="container">
+    <h4><b>nlimsowa</b></h4>
+    <p>Fate Fan, Too deep in the rabbit hole, Pls Help</p>
+    <img src="discord-logo-7A1EC3216C-seeklogo.com.png" alt="discord" style="width:5%">
+    <img src="Untitled.png" alt="twitter" style="width:5%">
+    <br>
+    <a href="https://x.com/tikasa02?mx=2"><button>Click me</button></a>
+  </div>
+</div> 
+</body>
+</html>
