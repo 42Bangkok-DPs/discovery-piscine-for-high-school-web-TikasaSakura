@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #ft_list {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .todo-item {
+            padding: 8px;
+            border: 1px solid #007BFF;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .todo-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const $todoList = $('#ft_list');
+            const $newTodoBtn = $('#newTodoBtn');
+
+            // Load existing todos from cookies
+            loadTodos();
+
+            // Event listener for creating new todo
+            $newTodoBtn.click(function() {
+                const todoText = prompt("Enter a new TO DO:");
+                if (todoText && todoText.trim()) {
+                    addTodo(todoText);
+                    saveTodos();
+                }
+            });
+
+            // Function to add a new todo
+            function addTodo(text) {
+                const $todoItem = $('<div class="todo-item"></div>').text(text);
+
+                // Add event listener to remove todo
+                $todoItem.click(function() {
+                    if (confirm("Do you really want to remove this TO DO?")) {
+                        $todoItem.remove();
+                        saveTodos();
+                    }
+                });
+
+                // Insert the new todo at the top
+                $todoList.prepend($todoItem);
+            }
+
+            // Function to save todos in cookies
+            function saveTodos() {
+                const todos = $todoList.children().map(function() {
+                    return $(this).text();
+                }).get();
+                document.cookie = `todos=${JSON.stringify(todos)}; path=/;`;
+            }
+
+            // Function to load todos from cookies
+            function loadTodos() {
+                const cookies = document.cookie.split('; ').find(row => row.startsWith('todos='));
+                if (cookies) {
+                    const todos = JSON.parse(cookies.split('=')[1]);
+                    todos.forEach(todo => addTodo(todo));
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <button id="newTodoBtn">New</button>
+    <div id="ft_list"></div>
+
+</body>
+</html>
