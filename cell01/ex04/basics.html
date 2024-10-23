@@ -2,41 +2,45 @@
 <html>
 <head>
 <style>
-h1 {text-align: center;}
+h1 {
+  text-align: center;
+}
 * {
   box-sizing: border-box;
 }
 
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+.row {
+  display: flex; 
+  justify-content: center; 
 }
 
+.column {
+  flex: 1; 
+  padding: 5px;
+  text-align: center; 
+}
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+img {
+  width: 100%;
+  height: auto; 
 }
 </style>
 </head>
 <title>Basics</title>
 <body style="background-color:pink;">
 
-<h1 style="color:White;">-so bigger-</h1>
+<h1 style="color:White;">The *** Shop!!!</h1>
 
 <div class="row">
- <div class="column">
-  <img src="Untitled.jpeg" alt="Shopee" style="width:100%">
-  <a href="https://shopee.co.th/">Shopee</a>
- </div>
+  <div class="column">
+    <img src="Untitled.jpeg" alt="Shopee">
+    <a href="https://shopee.co.th/">Shopee</a>
+  </div>
    
- <div class="column">
-   <img src="Amazon_The_Most_Valuable_Brands_2023.jpg" style"width:100%">
-  <a href="https://Amazon.com">Amazon</a>
- </div>
+  <div class="column">
+    <img src="Amazon_The_Most_Valuable_Brands_2023.jpg" alt="Amazon">
+    <a href="https://Amazon.com">Amazon</a>
+  </div>
 </div>
 <hr>
 
