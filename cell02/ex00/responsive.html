@@ -5,25 +5,35 @@
 <style>
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  height: 100vh; /* Full viewport height */
 }
 
 .column {
-  float: left;
-  width: 50%;
+  flex: 1; /* Each column takes equal space */
   padding: 10px;
-  height: 300px;
 }
 
+.column:nth-child(1) {
+  background-color: #ccc;
+}
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.column:nth-child(2) {
+  background-color: #bbb;
 }
 
 @media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
+  .row {
+    flex-direction: column; /* Stack columns on small screens */
   }
 }
 </style>
@@ -31,10 +41,10 @@
 <body>
 
 <div class="row">
-  <div class="column" style="background-color:#ccc;">
+  <div class="column">
     <h2>B</h2>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column">
     <h2>A</h2>
   </div>
 </div>
