@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syeesoon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('bg1.jpg'); /* Default background image */
+            background-size: contain; /* Ensure the image covers the entire background */
+            transition: background-image 0.5s; /* Smooth transition for background change */
+        }
+        .navbar {
+            background-color: black;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .content {
+            background-color: rgba(0,0,128, 0.8); /* Light blue with transparency */
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .text {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .content img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .scroll-section {
+            height: 1000px;
+            padding: 20px;
+            background-size: cover;
+        }
+        .certificate {
+            display: none; /* Initially hidden */
+            background-color: rgba(255, 234, 186, 0.8);
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+            max-width: auto;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .image-grid img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+       	 .contacts {
+	    background-color: black;
+ 	   color: white;
+ 	   padding: 50px; /* Reduced padding to fit better */
+	    max-width: auto;
+ 	   margin: 0;
+  	  border-radius: 8px;
+  	  flex-grow: 1; /* Make this div grow to fill available space *
+   	  display: flex; /* Use flexbox */
+  	  flex-direction: column; /* Stack items vertically */
+  	  justify-content: flex-start; /* Align items to the top */
+	}
+        .contact-line {
+            margin: 10px 0;
+        }
+          .contact-images {
+            display: flex; /* Flexbox for the images */
+            gap: 10px; /* Spacing between images */
+        }
+        .contact-images img {
+            max-width: 50px; /* Set a fixed width for images */
+            height: auto;
+            border-radius: 8px;
+        }
+           @media (max-width: 768px) {
+            .content {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center align for smaller screens */
+            }
+            .text {
+                margin-right: 0; /* Remove right margin on smaller screens */
+                text-align: center; /* Center text */
+            }
+            .content img {
+                max-width: 100%; /* Make image responsive */
+                margin-top: 10px; /* Add space above image */
+            }
+            .contacts {
+                padding: 20px; /* Reduce padding for smaller screens */
+            }
+            .contact-line h0 {
+                font-size: 14px; /* Smaller font size for contacts */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar a {
+                font-size: 16px; /* Smaller font size for mobile */
+            }
+            .contacts h1 {
+                font-size: 20px; /* Adjust heading size */
+            }
+            .certificate h1 {
+                font-size: 18px; /* Adjust heading sizes */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="rush.html">Time Travel</a>
+    </div>
+
+  <div class="content">
+    <div class="text" style="color: white;">
+        <h2 style="color: white;">Sipang Yeesoon(Sandra)</h2>
+        <p style="color: white;">Hello, my name is Sandra. I am 17 years old and I live in Bangkok. I am friendly and easily get along with people who share similar lifestyles. I am new to coding and have recently discovered my interest in it. I am excited to start exploring this field and I aspire to study technology in the future.</p>
+        <p style="color: white;">Nationality : Thai<br>Study plan : Math-english<br>Birthday:10 June 2007</p>
+    </div>
+    <img src="IMG_4276.webp" alt="Placeholder Image">
+</div>
+
+	 <div class="scroll-section">
+        <h2></h2>
+        <p></p>
+    </div>
+    <div class="certificate" id="certificate">
+    <h2>Projects</h2>
+    <h1>1.Calculator. One of the small projects I have tried is a calculator. The inspiration came from a TikTok video where a user showcased a beautifully designed calculator. I wanted to create a calculator that is visually appealing as well, as I believe it can motivate us and enhance our productivity.</h1>
+    <div class="image-grid">
+        <img src="IMG_4212.webp" alt="Image 1">
+        <img src="IMG_4213.webp" alt="Image 2">
+    </div>
+    <h1>2.Snake Game
+This is a game I tried to create during a workshop at Bansomdeka Business University. Unfortunately, the game is not yet 100% complete due to time constraints of the activity.</h1>
+    <div class="image-grid">
+        <img src="IMG_0478.webp" alt="Image 1">
+        <img src="IMG_0508.webp" alt="Image 2">
+        </div>
+     <h1>3.Graphic Design
+I designed a yellow sports sign that was selected for use in 2023. I used Photoshop to create and decorate the design.</h1>
+	<div class="image-grid">
+        <img src="IMG_3075.webp" alt="Image 1">
+        <img src="IMG_1684.webp" alt="Image 2">
+        </div>
+     <h1>T-shirt Design and Movie Project Sign
+I designed a t-shirt and created a project sign for a movie, inspired by a K-pop artist who is not earning any income from their work. This project allowed me to explore creative design while paying homage to the artist’s influence.</h1>
+	<div class="image-grid">
+	<img src="IMG_1686.webp">
+	<img src="IMG_9461.webp">
+	</div>
+    </div>
+</div>
+        </div>
+    </div>
+    
+    <div class="scroll-section">
+        <h2></h2>
+        <p></p>
+    </div>
+	
+	
+    <div class="contacts">
+        <h1>Contacts</h1>
+        <div class="contact-line">
+            <h0>Instagram-sandraaaaq_</h0>
+        </div>
+        <div class="contact-line">
+            <h0>Email-tidarate1011@gmail.com</h0>
+        </div>
+        <div class="contact-images">
+            <img src="Instagram_logo_2022.svg" alt="Discord Icon">
+            <img src="112-gmail_email_mail-512.webp" alt="Twitter Icon">
+        </div>
+    </div>
+    
+     <script>
+        const images = [
+            'bg1.jpg',
+            'Black_Silence_BG3.webp',
+        ];
+
+           window.onscroll = function() {
+            const certificate = document.getElementById('certificate');
+            if (scrollY > 300) {
+                document.body.style.backgroundImage = `url('${images[1]}')`; // Change to new image
+                certificate.style.display = 'block'; // Show the certificate
+            } 
+            else {
+                document.body.style.backgroundImage = `url('${images[0]}')`; // Revert to original image
+                certificate.style.display = 'none'; // Hide the certificate
+            }
+        };
+    </script>
+
+</body>
+</html>
